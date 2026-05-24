@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Plastic Lives Laboratory Studio</title>
   <meta name="description" content="研究・教育向けのオーダーメイド3Dプリント分子模型・タンパク質リボンモデル制作" />
+
   <style>
     :root {
       --bg: #f7f7f4;
@@ -16,7 +17,9 @@
       --accent-dark: #245548;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -26,7 +29,9 @@
       line-height: 1.7;
     }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+    }
 
     header {
       position: sticky;
@@ -69,13 +74,26 @@
       padding: 0 20px;
     }
 
-.hero {
-  padding: 0 0 72px;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 42px;
-  align-items: center;
-}
+    .hero-logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 72px 0 36px;
+    }
+
+    .hero-logo {
+      width: min(340px, 70%);
+      height: auto;
+      display: block;
+    }
+
+    .hero {
+      padding: 0 0 72px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: start;
+      border-top: none;
+    }
 
     .badge {
       display: inline-block;
@@ -125,7 +143,9 @@
       color: white;
     }
 
-    .button.primary:hover { background: var(--accent-dark); }
+    .button.primary:hover {
+      background: var(--accent-dark);
+    }
 
     .button.secondary {
       color: var(--accent);
@@ -135,27 +155,18 @@
     .visual {
       min-height: 360px;
       border-radius: 32px;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(47,111,94,0.24), transparent 30%),
-        radial-gradient(circle at 80% 70%, rgba(47,111,94,0.18), transparent 34%),
-        linear-gradient(145deg, #ffffff, #ecece4);
+      background: #f0f0ec;
       box-shadow: 0 24px 70px rgba(0,0,0,0.08);
       border: 1px solid var(--line);
-      display: grid;
-      place-items: center;
       overflow: hidden;
-      position: relative;
     }
 
-    .ribbon {
-      width: 72%;
-      height: 72%;
-      border: 22px solid rgba(47,111,94,0.75);
-      border-left-color: transparent;
-      border-bottom-color: rgba(47,111,94,0.35);
-      border-radius: 48% 52% 46% 54%;
-      transform: rotate(-28deg);
-      filter: drop-shadow(0 16px 18px rgba(0,0,0,0.14));
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 32px;
+      display: block;
     }
 
     section {
@@ -277,40 +288,33 @@
     }
 
     @media (max-width: 820px) {
-      .hero, .price-box {
-        grid-template-columns: 1fr;
-      }
-      .grid, .process {
-        grid-template-columns: 1fr;
-      }
       .nav-links {
         display: none;
       }
-      .hero {
-        padding-top: 58px;
+
+      .hero-logo-wrap {
+        margin: 48px 0 28px;
       }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-bottom: 56px;
+      }
+
       .visual {
         min-height: 260px;
       }
-    }
-    .hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 32px;
-}
-.hero-logo-wrap {
-  display: flex;
-  justify-content: center;
-  margin: 72px 0 36px;
-}
 
-.hero-logo {
-  width: min(340px, 70%);
-  height: auto;
-}
+      .grid,
+      .process,
+      .price-box {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <nav class="nav">
@@ -324,42 +328,29 @@
     </nav>
   </header>
 
-<main>
-  <div class="container">
-<div class="hero-logo-wrap">
-  <img src="logo.png" alt="可塑生命研 Plastic Lives LAB ロゴ" class="hero-logo">
-</div>
-
-<section class="hero">
-  <div>
-    <span class="badge">研究・教育向け3Dプリント模型</span>
-    <h1>タンパク質構造を、手に取れる模型に</h1>
-    <p class="lead">
-      PDBデータをもとに、リボンモデルや分子模型をオーダーメイドで制作します。
-      授業・研究室展示・プレゼン・構造理解のための実物モデルとして使えます。
-    </p>
-    <div class="actions">
-      <a class="button primary" href="https://forms.gle/LfWyHyAVfR87AMBL8">制作相談する</a>
-      <a class="button secondary" href="#features">詳しく見る</a>
-    </div>
-  </div>
-
-  <div class="visual">
-    <img src="hero.jpg" alt="タンパク質模型の画像" class="hero-img">
-  </div>
-</section>
-        <p class="lead">
-          PDBデータをもとに、リボンモデルや分子模型をオーダーメイドで制作します。
-          授業・研究室展示・プレゼン・構造理解のための実物モデルとして使えます。
-        </p>
-        <div class="actions">
-          <a class="button primary" href="https://forms.gle/LfWyHyAVfR87AMBL8">制作相談する</a>
-          <a class="button secondary" href="#features">詳しく見る</a>
-        </div>
+  <main>
+    <div class="container">
+      <div class="hero-logo-wrap">
+        <img src="logo.png" alt="可塑生命研 Plastic Lives LAB ロゴ" class="hero-logo">
       </div>
-<div class="visual">
-  <img src="Protein_model_1.png" alt="タンパク質リボンモデルの3Dプリント模型" class="hero-img">
-</div>
+
+      <section class="hero">
+        <div>
+          <span class="badge">研究・教育向け3Dプリント模型</span>
+          <h1>タンパク質構造を、手に取れる模型に</h1>
+          <p class="lead">
+            PDBデータをもとに、リボンモデルや分子模型をオーダーメイドで制作します。
+            授業・研究室展示・プレゼン・構造理解のための実物モデルとして使えます。
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://forms.gle/LfWyHyAVfR87AMBL8">制作相談する</a>
+            <a class="button secondary" href="#features">詳しく見る</a>
+          </div>
+        </div>
+
+        <div class="visual">
+          <img src="Protein_model_1.png" alt="タンパク質リボンモデルの3Dプリント模型" class="hero-img">
+        </div>
       </section>
     </div>
 
@@ -369,19 +360,21 @@
           <h2>ただの3Dプリントではなく、構造が伝わる模型へ。</h2>
           <p>研究対象や用途に合わせて、見せたい構造が伝わるように設計します。</p>
         </div>
+
         <div class="grid">
           <div class="card">
             <h3>PDBから制作</h3>
             <p>タンパク質構造データをもとに、リボンモデルや分子模型を作成します。</p>
           </div>
+
           <div class="card">
             <h3>オーダーメイド</h3>
             <p>サイズ、色、強度、表示したい部位などを相談しながら決められます。</p>
           </div>
+
           <div class="card">
             <h3>教育・展示向け</h3>
-            <p>PDBデータをもとに、タンパク質のリボンモデルや分子模型を制作します。
-授業、研究室展示、プレゼン、構造理解のための実物モデルとして使えます。</p>
+            <p>授業、研究室展示、学会展示、プレゼン補助などに使える模型を目指します。</p>
           </div>
         </div>
       </div>
@@ -393,19 +386,23 @@
           <h2>制作の流れ</h2>
           <p>最初は小規模に、相談ベースで受注する想定です。</p>
         </div>
+
         <div class="process">
           <div class="step">
             <h3>相談</h3>
             <p>作りたい分子、PDB ID、用途、希望サイズを確認します。</p>
           </div>
+
           <div class="step">
             <h3>設計</h3>
             <p>構造を確認し、模型化に向いた表示方法を決めます。</p>
           </div>
+
           <div class="step">
             <h3>試作</h3>
             <p>強度や見た目を確認し、必要に応じて調整します。</p>
           </div>
+
           <div class="step">
             <h3>納品</h3>
             <p>完成品を発送、またはSTL/OBJデータとして納品します。</p>
@@ -430,19 +427,20 @@
       <div class="container">
         <div class="section-head">
           <h2>制作相談</h2>
-         <p>
-  相談はメール、Googleフォーム、SNSのDMなどから受け付け予定です。<br>
-  メールアドレス:
-  <a href="mailto:plasticliveslaboratory@gmail.com">plasticliveslaboratory@gmail.com</a>
-</p>
+          <p>
+            相談はメール、Googleフォーム、SNSのDMなどから受け付け予定です。<br>
+            メールアドレス:
+            <a href="mailto:plasticliveslaboratory@gmail.com">plasticliveslaboratory@gmail.com</a>
+          </p>
         </div>
-<a class="button primary" href="mailto:plasticliveslaboratory@gmail.com?subject=%E3%82%BF%E3%83%B3%E3%83%91%E3%82%AF%E8%B3%AA%E6%A8%A1%E5%9E%8B%E3%81%AE%E5%88%B6%E4%BD%9C%E7%9B%B8%E8%AB%87">メールで相談する</a>
+
+        <a class="button primary" href="mailto:plasticliveslaboratory@gmail.com?subject=%E3%82%BF%E3%83%B3%E3%83%91%E3%82%AF%E8%B3%AA%E6%A8%A1%E5%9E%8B%E3%81%AE%E5%88%B6%E4%BD%9C%E7%9B%B8%E8%AB%87">メールで相談する</a>
       </div>
     </section>
   </main>
 
   <footer>
-    © 2026 Protein Model Studio. All rights reserved.
+    © 2026 Plastic Lives Laboratory Studio. All rights reserved.
   </footer>
 </body>
 </html>
