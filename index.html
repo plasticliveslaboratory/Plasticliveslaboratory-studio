@@ -299,11 +299,16 @@
   object-fit: cover;
   border-radius: 32px;
 }
-    .hero-logo {
+.hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-logo {
   display: block;
-  width: min(360px, 80%);
+  width: min(320px, 72%);
   height: auto;
-  margin: 0 0 24px;
+  margin: 0 auto 96px;
 }
   </style>
 </head>
@@ -320,22 +325,22 @@
     </nav>
   </header>
 
-  <main>
-    <div class="container">
-      <section class="hero">
-        <div>
-          <img src="logo.png" alt="可塑生命研 Plastic Lives LAB ロゴ" class="hero-logo">
-          <span class="badge">研究・教育向け3Dプリント模型</span>
-          <h1>タンパク質構造を、手に取れる模型に</h1>
-          <p class="lead">
-            PDBデータをもとに、リボンモデルや分子模型をオーダーメイドで制作します。
-            授業・研究室展示・プレゼン・構造理解のための実物モデルとして使えます。
-          </p>
-          <div class="actions">
-            <a class="button primary" href="https://forms.gle/LfWyHyAVfR87AMBL8">制作相談する</a>
-            <a class="button secondary" href="#features">詳しく見る</a>
-          </div>
+<main>
+  <div class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <img src="logo.png" alt="可塑生命研 Plastic Lives LAB ロゴ" class="hero-logo">
+        <span class="badge">研究・教育向け3Dプリント模型</span>
+        <h1>タンパク質構造を、手に取れる模型に</h1>
+        <p class="lead">
+          PDBデータをもとに、リボンモデルや分子模型をオーダーメイドで制作します。
+          授業・研究室展示・プレゼン・構造理解のための実物モデルとして使えます。
+        </p>
+        <div class="actions">
+          <a class="button primary" href="https://forms.gle/LfWyHyAVfR87AMBL8">制作相談する</a>
+          <a class="button secondary" href="#features">詳しく見る</a>
         </div>
+      </div>
 <div class="visual">
   <img src="Protein_model_1.png" alt="タンパク質リボンモデルの3Dプリント模型" class="hero-img">
 </div>
